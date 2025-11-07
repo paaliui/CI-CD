@@ -16,11 +16,13 @@ target_link_libraries(app PRIVATE geometry)
 
 # ---- Tests ----
 enable_testing()
+
+# Triangle tests
 add_executable(test_triangle tests/test_triangle.cpp)
 target_link_libraries(test_triangle PRIVATE geometry)
 add_test(NAME triangle_tests COMMAND test_triangle)
 
-enable_testing()
+# Circle tests
 add_executable(test_circle tests/test_circle.cpp)
-target_link_libraries(test_cicrle PRIVATE geometry)
+target_link_libraries(test_circle PRIVATE geometry)
 add_test(NAME circle_tests COMMAND test_circle)
